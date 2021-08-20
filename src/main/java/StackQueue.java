@@ -30,7 +30,6 @@ public class Poppingstack{
         myLinkedList.pop();
         myLinkedList.pop();
         myLinkedList.pop();
-        Assert.assertTrue(res
         boolean result=myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode);
         Assert.assertTrue(result);
 
@@ -49,5 +48,23 @@ public class MyQueue{
         boolean result=myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode);
         Assert.assertTrue(result);
 
+    }
+}
+@Test
+/*Dequque*/
+public class MyQueue {
+    public void given3numberaddedtoqueue() {
+        MyNode<Integer> myFirstNode = new MyNODE<>(key:56);
+        MyNode<Integer> mySecondNode = new MyNODE<>(key:30);
+        MyNode<Integer> myThirdNode = new MyNODE<>(key:70);
+        myFirstNode.setNext(mySecondNode);
+        mySecondNode.setNext(myThirdNode);
+        boolean result = myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode);
+        myLinkedList.enqueue_front(56);
+        myLinkedList.getfront();
+        myLinkedList.getrear();
+        myLinkedList.dequeue_front();
+        myLinkedList.dequeue_rear();
+        Assert.assertTrue(result);
     }
 }
